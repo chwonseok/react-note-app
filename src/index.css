@@ -28,6 +28,8 @@
 
   min-height: 200px;
   background: #f7f794;
+
+  white-space: pre-wrap;
 }
 
 .note-footer {
