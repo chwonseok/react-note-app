@@ -1,10 +1,20 @@
-const Header = ({ changeDark }) => {
+const Header = ({ changeDark, resetNotes }) => {
   return (
     <div className="header">
       <h1>Notes.</h1>
-      <button onClick={() => changeDark()} className="btn">
-        Dark Mode
-      </button>
+      <div className="header-btns">
+        <button onClick={() => changeDark()} className="btn">
+          Dark Mode
+        </button>
+        <button
+          onClick={() => {
+            resetNotes();
+          }}
+          className="btn reset"
+        >
+          Reset
+        </button>
+      </div>
     </div>
   );
 };

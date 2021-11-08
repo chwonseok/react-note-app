@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import NotesList from './components/NotesList';
 import uniqid from 'uniqid';
 import Search from './components/Search';
@@ -16,6 +16,23 @@ const App = () => {
   const [notes, setNotes] = useState(defaultNote);
   const [searchText, setSearchText] = useState('');
   const [dark, setDark] = useState(false);
+
+  useEffect(() => {
+    const savedNotes = JSON.parse(localStorage.getItem('notes-data'));
+
+    if (!savedNotes) return; // To check if there is savedNotes
+
+    setNotes(savedNotes);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('notes-data', JSON.stringify(notes));
+  }, [notes]);
+
+  const resetNotes = () => {
+    localStorage.clear();
+    setNotes(defaultNote);
+  };
 
   const changeDark = () => {
     setDark(!dark);
@@ -41,7 +58,7 @@ const App = () => {
   return (
     <div className={`${dark ? 'app dark' : 'app'}`}>
       <div className="container">
-        <Header changeDark={changeDark} />
+        <Header changeDark={changeDark} resetNotes={resetNotes} />
         <Search searchNote={setSearchText} />
         <NotesList
           notes={notes.filter((note) =>
