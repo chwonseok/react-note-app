@@ -1,10 +1,12 @@
+import AddNote from './NewNote';
 import Note from './Note';
 
 const NotesList = ({ notes }) => {
   return (
     <div className="notes-list">
+      <AddNote />
       {notes.map((note) => (
-        <Note />
+        <Note key={note.id} note={note} />
       ))}
     </div>
   );

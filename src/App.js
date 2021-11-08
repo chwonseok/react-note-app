@@ -1,30 +1,33 @@
+import { useState } from 'react';
 import NotesList from './components/NotesList';
+import uniqid from 'uniqid';
 
 const data = [
   {
-    id: id(),
+    id: uniqid(),
     text: 'this is the first note!',
-    data: '2021/11/01',
+    date: '2021/11/01',
   },
   {
-    id: id(),
+    id: uniqid(),
     text: 'this is the second note!',
-    data: '2021/11/02',
+    date: '2021/11/02',
   },
   {
-    id: id(),
+    id: uniqid(),
     text: 'this is the third note!',
-    data: '2021/11/03',
+    date: '2021/11/03',
   },
   {
-    id: id(),
+    id: uniqid(),
     text: 'this is the forth note!',
-    data: '2021/11/04',
+    date: '2021/11/04',
   },
 ];
 
 const App = () => {
   const [notes, setNotes] = useState(data);
+
   return (
     <div className="app">
       <div className="container">
