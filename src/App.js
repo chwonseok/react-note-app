@@ -15,6 +15,11 @@ const defaultNote = [
 const App = () => {
   const [notes, setNotes] = useState(defaultNote);
   const [searchText, setSearchText] = useState('');
+  const [dark, setDark] = useState(false);
+
+  const changeDark = () => {
+    setDark(!dark);
+  };
 
   const removeNote = (id) => {
     const newNotes = notes.filter((note) => note.id !== id);
@@ -34,9 +39,9 @@ const App = () => {
   };
 
   return (
-    <div className="app">
+    <div className={`${dark ? 'app dark' : 'app'}`}>
       <div className="container">
-        <Header />
+        <Header changeDark={changeDark} />
         <Search searchNote={setSearchText} />
         <NotesList
           notes={notes.filter((note) =>

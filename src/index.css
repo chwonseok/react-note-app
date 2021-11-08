@@ -2,6 +2,8 @@
 * {
   margin: 0;
   padding: 0;
+  border: 0;
+  font-size: 100%;
 }
 
 h1 {
@@ -11,7 +13,21 @@ h1 {
 
 /* App.js */
 .app {
-  width: 100%;
+  height: 100vh;
+}
+
+/* Dark Mode */
+.app.dark {
+  background: #000;
+}
+
+.app.dark .header h1 {
+  color: white;
+}
+
+.app.dark .btn {
+  background: rgb(233, 233, 233);
+  color: #000;
 }
 
 .container {
@@ -25,7 +41,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 1rem 0 1rem 0;
+  padding: 1rem 0 1rem 0;
 }
 
 .header h1 {
@@ -45,6 +61,11 @@ h1 {
 
 .btn:hover {
   cursor: pointer;
+  opacity: 0.7;
+}
+
+.btn:focus {
+  outline: none;
   opacity: 0.7;
 }
 
