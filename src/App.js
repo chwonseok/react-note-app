@@ -13,6 +13,11 @@ const defaultNote = [
 const App = () => {
   const [notes, setNotes] = useState(defaultNote);
 
+  const removeNote = (id) => {
+    const newNotes = notes.filter((note) => note.id !== id);
+    setNotes(newNotes);
+  };
+
   const addNote = (note) => {
     const date = new Date().toLocaleDateString();
 
@@ -28,7 +33,7 @@ const App = () => {
   return (
     <div className="app">
       <div className="container">
-        <NotesList notes={notes} addNote={addNote} />
+        <NotesList notes={notes} addNote={addNote} removeNote={removeNote} />
       </div>
     </div>
   );

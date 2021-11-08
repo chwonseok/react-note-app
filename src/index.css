@@ -38,6 +38,15 @@
   justify-content: space-between;
 }
 
+.delete-btn {
+  font-size: 1.5rem;
+}
+
+.delete-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
 /* NewNote.js */
 .note.new {
   background: turquoise;
