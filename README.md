@@ -5,7 +5,7 @@ This is react project that you can add a simple note, search a note, delete a no
 # Dependencies
 
 1. react-icons
-   `npm install react-icons`
+   - `npm install react-icons`
 
 # Update History
 
