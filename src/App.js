@@ -2,6 +2,7 @@ import { useState } from 'react';
 import NotesList from './components/NotesList';
 import uniqid from 'uniqid';
 import Search from './components/Search';
+import Header from './components/Header';
 
 const defaultNote = [
   {
@@ -35,6 +36,7 @@ const App = () => {
   return (
     <div className="app">
       <div className="container">
+        <Header />
         <Search searchNote={setSearchText} />
         <NotesList
           notes={notes.filter((note) =>

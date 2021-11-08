@@ -34,7 +34,7 @@ const AddNote = ({ addNote }) => {
       ></textarea>
       <div className="note-footer">
         <span>{textLimit} Remaining</span>
-        <button onClick={onClick} className="save">
+        <button onClick={onClick} className="btn">
           save
         </button>
       </div>
