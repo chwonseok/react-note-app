@@ -10,6 +10,8 @@ delete a note,
 
 reset the note app.
 
+Also, this is responsive web app 😉
+
 # Live
 
 https://chwonseok.github.io/react-note-app/
