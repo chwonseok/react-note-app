@@ -1,16 +1,22 @@
 # What's this?
 
+> Normal
+> <img src='./src/img/note-app__normal.png'>
+
+> Dark
+> <img src='./src/img/note-app__dark.png'>
+
 This is Note App built with React.js, which you can
 
-add a note,
+ADD a note,
 
-search a note,
+SEARCH a note,
 
-delete a note,
+DELETE a note,
 
-reset the note app.
+RESET the note app.
 
-Also, this is responsive web app 😉
+Also, this is RESPONSIVE web app 😉
 
 # Live
 
